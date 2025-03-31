@@ -4,31 +4,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ステップ1：自己診断開始</title>
+  <title>時給診断：ステップ統合ページ</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
-    section { padding: 40px 0; border-bottom: 1px solid #ddd; }
-    h1 { color: #16a085; }
-    .navigation { text-align: center; margin-top: 30px; }
-    .navigation a {
-      padding: 12px 20px; margin: 0 10px;
-      background-color: #1abc9c; color: white;
-      border-radius: 30px; text-decoration: none;
-      font-weight: bold;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #a8edea, #7ed6df);
+      color: #333;
     }
-    .navigation a:hover { background-color: #149174; }
+    .section {
+      padding: 60px 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    .section h2 {
+      text-align: center;
+      color: #16a085;
+    }
+    .section p {
+      max-width: 600px;
+      margin: 10px auto;
+      font-size: 1.1em;
+    }
+    .nav-button {
+      display: inline-block;
+      padding: 12px 20px;
+      margin: 20px auto 0;
+      background-color: #1abc9c;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .nav-container {
+      text-align: center;
+    }
+    .footer {
+      text-align: center;
+      padding: 30px;
+      font-weight: bold;
+      color: #0e6251;
+    }
   </style>
 </head>
 <body>
 
-<section id="step1">
-  <h1>ステップ1：自己診断開始</h1>
-  <p>ここは最初のページです。</p>
-</section>
+<div class="section" id="step1">
+  <h2>ステップ1：自己診断開始</h2>
+  <p>あなたの頑張りを振り返り、成長のきっかけを見つけましょう！</p>
+  <div class="nav-container">
+    <a href="#step2" class="nav-button">▶ 次へ進む</a>
+  </div>
+</div>
 
-<section class="navigation">
-  <a href="step2.html">▶ 次へ進む</a>
-</section>
+<div class="section" id="step2">
+  <h2>ステップ2：中間チェック</h2>
+  <p>自己評価に基づいて、改善点や強みを確認します。</p>
+  <div class="nav-container">
+    <a href="#step1" class="nav-button">◀ 戻る</a>
+    <a href="#step3" class="nav-button">▶ 次へ進む</a>
+  </div>
+</div>
+
+<div class="section" id="step3">
+  <h2>ステップ3：完了ページ</h2>
+  <p>お疲れ様でした！最後に店長と面談し、評価を確定させましょう。</p>
+  <div class="nav-container">
+    <a href="#step2" class="nav-button">◀ 戻る</a>
+    <a href="#step1" class="nav-button">🏠 トップに戻る</a>
+  </div>
+</div>
+
+<div class="footer">
+  【自分を知る → 成長する → 評価される → 時給UP！】<br>
+  このサイクルを楽しもう♪
+</div>
 
 </body>
 </html>
