@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社BAN 第7期事業計画</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .slide-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .slide {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-top: 6px solid #1abc9c; /* エメラルドグリーン */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: none; /* 初期状態では非表示 */
+        }
+        .slide.active {
+            display: block; /* アクティブなスライドのみ表示 */
+        }
+        h2 {
+            font-size: 24px;
+            color: #1abc9c; /* エメラルドグリーン */
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 20px;
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .strategy-box {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: rgba(26, 188, 156, 0.05);
+            border-radius: 5px;
+            border-left: 3px solid #1abc9c;
+        }
+        .highlight {
+            background-color: rgba(26, 188, 156, 0.15);
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 4px solid #1abc9c;
+            margin: 15px 0;
+        }
+        .key-metric {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #1abc9c;
+            margin: 15px 0;
+            padding: 12px;
+            background-color: rgba(26, 188, 156, 0.1);
+            border-radius: 8px;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        .nav-btn {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .nav-btn:hover {
+            background-color: #16a085;
+        }
+        .nav-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .page-indicator {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        .slide-dots {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- スライド6: 全体戦略とビジョン -->
+        <div id="slide1" class="slide active">
+            <h2>全体戦略とビジョン</h2>
+            <div class="strategy-box">
+                <h3>ビジョン</h3>
+                <ul>
+                    <li>評価の透明性を基盤とした信頼組織の構築</li>
+                    <li>公正な評価と報酬による自律型人材の育成</li>
+                    <li>AIを活用した業務効率化と意思決定の高度化</li>
+                </ul>
+            </div>
+            <div class="highlight">
+                <h3 style="text-align: center;">好循環（正のスパイラル）の実現</h3>
+                <div style="text-align:center; margin: 15px 0;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" style="max-width: 100%; height: auto;">
+                      <!-- 背景 -->
+                      <rect width="800" height="500" fill="white" />
+                      
+                      <!-- スパイラル図の背景円 -->
+                      <circle cx="400" cy="250" r="180" fill="#e6f7f2" />
+                      
+                      <!-- スパイラルの矢印 - 簡潔で美しいカーブ -->
+                      <path d="M400,100 C520,100 550,170 550,250 C550,330 520,400 400,400 C280,400 250,330 250,250 C250,170 280,140 320,140" 
+                            stroke="#1abc9c" stroke-width="5" fill="none" stroke-linecap="round" />
+                      
+                      <!-- 矢印の先端 -->
+                      <polygon points="310,130 330,145 335,125" fill="#1abc9c" />
+                      
+                      <!-- 各ステージのテキストボックス -->  
+                      <!-- 1. 評価の透明性 (起点・上) -->
+                      <rect x="320" y="70" width="160" height="60" rx="10" ry="10" fill="#1abc9c" />
+                      <text x="400" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">評価の透明性</text>
+                      <text x="400" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">公正な評価・明確な基準</text>
+                      
+                      <!-- 2. モチベーション向上 (右) -->
+                      <rect x="530" y="220" width="160" height="60" rx="10" ry="10" fill="#1abc9c" />
+                      <text x="610" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">モチベーション向上</text>
+                      <text x="610" y="270" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">高いやる気・定着率</text>
+                      
+                      <!-- 3. サービス品質向上 (下) -->
+                      <rect x="320" y="370" width="160" height="60" rx="10" ry="10" fill="#1abc9c" />
+                      <text x="400" y="400" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">サービス品質向上</text>
+                      <text x="400" y="420" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">顧客満足度の向上</text>
+                      
+                      <!-- 4. 顧客増加・売上向上 (左) -->
+                      <rect x="110" y="220" width="160" height="60" rx="10" ry="10" fill="#1abc9c" />
+                      <text x="190" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">顧客増加・売上向上</text>
+                      <text x="190" y="270" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">業績向上</text>
+                      
+                      <!-- 「結果として」のラベル -->
+                      <text x="200" y="440" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#16a085">結果として</text>
+                      
+                      <!-- スパイラルの結果 -->
+                      <rect x="250" y="450" width="300" height="40" rx="20" ry="20" fill="#16a085" />
+                      <text x="400" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">優秀な人材確保と健全な競争社会</text>
+                      
+                      <!-- 結果を示す矢印 -->
+                      <path d="M400,430 L400,450" stroke="#16a085" stroke-width="3" stroke-dasharray="5,3" />
+                      <polygon points="400,450 395,440 405,440" fill="#16a085" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- スライド7: 経営戦略：ヒト -->
+        <div id="slide2" class="slide">
+            <h2>経営戦略：ヒト</h2>
+            <div class="strategy-box">
+                <h3>コミュニケーション</h3>
+                <ul>
+                    <li>アルバイト繁盛店視察（年11回）</li>
+                    <li>社員繁盛店視察（年11回）</li>
+                    <li>地方視察（年4回）</li>
+                </ul>
+                <button id="scheduleBtn" style="background-color: #1abc9c; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; margin-top: 8px;" onclick="copyScheduleLink()">視察スケジュールを確認</button>
+                <div id="copyMsg" style="display: none; margin-top: 5px; font-size: 12px; color: #16a085;"></div>
+                
+                <script>
+                function copyScheduleLink() {
+                    const scheduleUrl = "https://docs.google.com/spreadsheets/d/1BJLy0wCGS8qBxQej4eFHVBqEcPwnZUVV/edit?gid=150580019#gid=150580019";
+                    
+                    // URLをクリップボードにコピー
+                    navigator.clipboard.writeText(scheduleUrl)
+                    .then(() => {
+                        // コピー成功時のメッセージ
+                        const msg = document.getElementById('copyMsg');
+                        msg.textContent = "URLをクリップボードにコピーしました。ブラウザに貼り付けてください。";
+                        msg.style.display = "block";
+                        
+                        // 3秒後にメッセージを非表示
+                        setTimeout(() => {
+                            msg.style.display = "none";
+                        }, 3000);
+                    })
+                    .catch(err => {
+                        // コピー失敗時
+                        alert("URLのコピーに失敗しました: " + scheduleUrl);
+                    });
+                }
+                </script>
+            </div>
+            <div class="strategy-box">
+                <h3>報酬体系</h3>
+                <ul>
+                    <li>店長給: <span style="color: #1abc9c; font-weight: bold;">50万円</span></li>
+                    <li>アルバイト時給: 最大2000円（平均1,574円）</li>
+                    <li>AI活用の評価制度による正当な競争環境</li>
+                </ul>
+            </div>
+            <div class="strategy-box">
+                <h3>働きやすい環境整備</h3>
+                <ul>
+                    <li>柔軟なシフト体制</li>
+                    <li>明確な業務マニュアル</li>
+                    <li>定期面談の実施</li>
+                    <li>チーム内コミュニケーション強化</li>
+                    <li>個々の成長を促す評価フィードバック</li>
+                </ul>
+            </div>
+            <div class="highlight">
+                <p><strong>正当な評価と透明な報酬体系で、従業員のモチベーション向上と成長を促進</strong></p>
+                <p><strong>従業員が成長し、やりがいを感じられる環境が、高品質なサービスを生み出す基盤となる</strong></p>
+            </div>
+        </div>
+
+        <!-- スライド8: 経営戦略：モノ -->
+        <div id="slide3" class="slide">
+            <h2>経営戦略：モノ</h2>
+            <div class="strategy-box">
+                <h3>業務プロセスの効率化</h3>
+                <ul>
+                    <li>AIシステム導入</li>
+                    <li>デジタルツールの活用</li>
+                    <li>マニュアルの最適化</li>
+                    <li>無駄な作業の削減</li>
+                </ul>
+            </div>
+            <div class="strategy-box">
+                <h3>顧客満足度向上施策</h3>
+                <ul>
+                    <li>高品質な接客の徹底</li>
+                    <li>定期アンケートの実施
+                        <ul>
+                            <li>11段階NPS</li>
+                            <li>目標回答率30%以上</li>
+                            <li>目標満足度80%以上</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="strategy-box">
+                <h3>市場対応力強化</h3>
+                <ul>
+                    <li>SNS・口コミの活用</li>
+                    <li>迅速なサービス改善サイクルの構築</li>
+                    <li>顧客フィードバックの即時反映</li>
+                    <li>定期的な市場トレンド分析</li>
+                </ul>
+            </div>
+            <div class="strategy-box">
+                <h3>新規出店計画</h3>
+                <ul>
+                    <li>市場調査に基づく戦略的な立地選定</li>
+                    <li>効率的な初期投資計画</li>
+                    <li>早期黒字化を目指す運営設計</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- スライド9: 経営戦略：カネ -->
+        <div id="slide4" class="slide">
+            <h2>経営戦略：カネ</h2>
+            <div class="strategy-box">
+                <h3>戦略的再投資</h3>
+                <ul>
+                    <li>新店舗出店への投資</li>
+                    <li>人材育成への重点投資</li>
+                    <li>設備・システム更新の最適化</li>
+                </ul>
+            </div>
+            <div class="strategy-box">
+                <h3>数値管理の強化</h3>
+                <ul>
+                    <li>KPI：客単価 店舗毎に4,000〜6,000円の設定</li>
+                    <li>KPI：人時売上高8000円を目指す</li>
+                    <li>高いレベルの店長ルーティンワークで漏れのない数値管理を目指す
+                        <ul>
+                            <li>特別な活動ではなく当たり前のレベルを上げるだけで結果は劇的に変わるはず</li>
+                            <li>当たり前のことを当たり前にできるようにすることに集中</li>
+                        </ul>
+                    </li>
+                    <li>週次での業績レビュー</li>
+                </ul>
+            </div>
+            <div class="key-metric">持続的な利益成長サイクルの構築</div>
+        </div>
+
+        <!-- ナビゲーション -->
+        <div class="navigation">
+            <button id="prevBtn" class="nav-btn" disabled>前へ</button>
+            <button id="nextBtn" class="nav-btn">次へ</button>
+        </div>
+
+        <!-- スライドのドット表示 -->
+        <div class="slide-dots">
+            <span class="dot active" onclick="showSlide(1)"></span>
+            <span class="dot" onclick="showSlide(2)"></span>
+            <span class="dot" onclick="showSlide(3)"></span>
+            <span class="dot" onclick="showSlide(4)"></span>
+        </div>
+
+        <div class="page-indicator">
+            <span id="currentPage">1</span> / 4
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 4;
+        
+        function showSlide(slideNumber) {
+            // 現在のスライドを非表示
+            document.getElementById('slide' + currentSlide).classList.remove('active');
+            document.querySelector('.dot:nth-child(' + currentSlide + ')').classList.remove('active');
+            
+            // 選択されたスライドを表示
+            currentSlide = slideNumber;
+            document.getElementById('slide' + currentSlide).classList.add('active');
+            document.querySelector('.dot:nth-child(' + currentSlide + ')').classList.add('active');
+            
+            // ナビゲーションボタンの状態更新
+            document.getElementById('prevBtn').disabled = (currentSlide === 1);
+            document.getElementById('nextBtn').disabled = (currentSlide === totalSlides);
+            
+            // ページインジケータ更新
+            document.getElementById('currentPage').textContent = currentSlide;
+        }
+        
+        // 次へボタンのイベント
+        document.getElementById('nextBtn').addEventListener('click', function() {
+            if (currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            }
+        });
+        
+        // 前へボタンのイベント
+        document.getElementById('prevBtn').addEventListener('click', function() {
+            if (currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        });
+        
+        // キーボードでのナビゲーション
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' && currentSlide < totalSlides) {
+                showSlide(currentSlide + 1);
+            } else if (event.key === 'ArrowLeft' && currentSlide > 1) {
+                showSlide(currentSlide - 1);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社BAN 第7期事業計画</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .slide-container {
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .slide {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-top: 6px solid #1abc9c; /* エメラルドグリーン */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: none; /* 初期状態では非表示 */
+        }
+        .slide.active {
+            display: block; /* アクティブなスライドのみ表示 */
+        }
+        .title-slide {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 28px;
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 24px;
+            color: #1abc9c; /* エメラルドグリーン */
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 20px;
+            color: #16a085;
+            margin-bottom: 10px;
+        }
+        ul, ol {
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: rgba(26, 188, 156, 0.15);
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 4px solid #1abc9c;
+            margin: 15px 0;
+        }
+        .key-metric {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #1abc9c;
+            margin: 15px 0;
+            padding: 12px;
+            background-color: rgba(26, 188, 156, 0.1);
+            border-radius: 8px;
+        }
+        .strategy-box {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: rgba(26, 188, 156, 0.05);
+            border-radius: 5px;
+            border-left: 3px solid #1abc9c;
+        }
+        .image-placeholder {
+            background-color: #e0e0e0;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            border-radius: 8px;
+            color: #666;
+            font-style: italic;
+            background: linear-gradient(135deg, rgba(26, 188, 156, 0.1), rgba(26, 188, 156, 0.3));
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 10px 0;
+        }
+        .nav-button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #16a085;
+        }
+        .nav-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .slide-indicator {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #666;
+        }
+        .slide-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .dot.active {
+            background-color: #1abc9c;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin: 25px 0 15px 0;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            background-color: #1abc9c;
+        }
+        .section-content {
+            margin: 0 0 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: rgba(26, 188, 156, 0.1);
+            border-left: 4px solid #1abc9c;
+        }
+        .bold-text {
+            font-weight: bold;
+            color: #16a085;
+        }
+        .sub-item {
+            margin: 5px 0 10px 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- スライド1: 表紙 -->
+        <div class="slide title-slide active" id="slide-1">
+            <h1>株式会社BAN</h1>
+            <h2 style="color: white; border-bottom: none; padding: 15px 0;">第7期事業計画 (2025年度～)</h2>
+        </div>
+
+        <!-- スライド2: 目次 -->
+        <div class="slide" id="slide-2">
+            <h2>目次</h2>
+            <ol>
+                <li>事業計画概要</li>
+                <li>2025年度予算概要</li>
+                <li>利益予算の根拠</li>
+                <li>現状の課題と負のスパイラルからの転換</li>
+                <li>経営戦略（ヒト・モノ・カネ）</li>
+                <li>AI活用による業務改善</li>
+                <li>リスク管理と対策</li>
+            </ol>
+        </div>
+
+        <!-- スライド3: 事業計画概要 -->
+        <div class="slide" id="slide-3">
+            <h2>事業計画概要</h2>
+            
+            <div class="section-title">1. 目的（なぜそれをするのか）</div>
+            <div class="section-content">
+                <ul>
+                    <li><span class="bold-text">企業の存続と持続的成長の実現</span><br>
+                    市場環境の厳しさを踏まえ、現状の<span class="bold-text">「負のスパイラル」</span>を断ち切り、全社が連動する<span class="bold-text">正のスパイラル（好循環）</span>を実現する。</li>
+                    <li><span class="bold-text">組織の健全化と競争力強化</span><br>
+                    <span class="bold-text">正当な評価制度</span>と透明な報酬体系を基盤とし、従業員のモチベーションを高め、<span class="bold-text">サービス品質</span>と<span class="bold-text">店舗運営力</span>の向上を図る。</li>
+                </ul>
+            </div>
+            
+            <div class="section-title">2. 目標（何を達成するのか）</div>
+            <div class="section-content">
+                <ul>
+                    <li><span class="bold-text">営業利益予算 1億300万円 の達成</span></li>
+                    <li><span class="bold-text">根拠</span>：BANは「<span class="bold-text">強い店舗の集合体</span>」を目指す。<br>
+                    強いお店の定義は、<span class="bold-text">顧客満足度が高い</span>こと、給与が一般の1.5倍、そして営業利益が3倍という基準に基づいており、これを首都圏の平均飲食店データから算出した数字となる。</li>
+                    <li><span class="bold-text">従業員と顧客の満足度向上</span>
+                        <div class="sub-item">• 従業員：AIを活用した評価制度により店長・スタッフの成長促進と離職率の低下。</div>
+                        <div class="sub-item">• 顧客：定期アンケート（11段階NPS、回答率30%以上、満足度80%以上）によるサービス改善。</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="section-title">3. 手段（どのように実施するのか）</div>
+            <div class="section-content">
+                <ul>
+                    <li><span class="bold-text">評価・報酬制度の改革</span>
+                        <div class="sub-item">• <span class="bold-text">AI活用の評価制度</span>：学習済み評価基準に基づき、社員・アルバイトを自動査定し、リアルタイムでフィードバックを提供。</div>
+                        <div class="sub-item">• <span class="bold-text">正当な報酬体系</span>：店長給 <span class="bold-text">50万円</span>、アルバイト時給 <span class="bold-text">最大2000円／平均1700円</span> と連動し、<span class="bold-text">正しい競争環境</span>を構築。</div>
+                    </li>
+                    <li><span class="bold-text">現場力強化のための視察活動</span>
+                        <div class="sub-item">• <span class="bold-text">毎月の社員・店長による繁盛店視察</span></div>
+                        <div class="sub-item">• <span class="bold-text">毎月のアルバイトだけの繁盛店視察</span></div>
+                        <div class="sub-item">• <span class="bold-text">年4回の地方視察</span>（長崎、福岡、沖縄、高知）</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- スライド4: 2025年度予算概要 -->
+        <div class="slide" id="slide-4">
+            <h2>2025年度予算概要</h2>
+            <div class="key-metric">店舗営業利益予算: 1億300万円</div>
+            <p style="text-align: center; font-size: 14px; margin-top: -10px; color: #666;">※本部費は別途計上</p>
+            
+            <h3>投資配分</h3>
+            <ul>
+                <li>人材育成（店長教育、アルバイトスタッフ）</li>
+                <li>顧客満足度の向上（アンケート回収率30％、NPS8〜10獲得率80％）</li>
+                <li>人時売上高向上による生産性アップ</li>
+                <li>AIツール導入による店長業務サポートと公正な人材評価</li>
+                <li>オリジナルのAIツール導入による様々な業務サポート</li>
+            </ul>
+            
+            <div class="highlight">
+                <h3>数値目標</h3>
+                <ul style="margin-top: 10px;">
+                    <li><strong>客単価:</strong> 店舗毎の設定 4,000〜6,000円</li>
+                    <li><strong>人時売上高:</strong> 8,000円</li>
+                    <li><strong>社員平均給与:</strong>
+                        <ul>
+                            <li>2024年度: 387,500円</li>
+                            <li>2025年度: 418,000円（実行済み）</li>
+                            <li>2026年度: 462,000円（目標）</li>
+                        </ul>
+                    </li>
+                    <li><strong>アルバイト平均時給:</strong>
+                        <ul>
+                            <li>2024年度: 1,343円</li>
+                            <li>2025年度: 1,574円（目標）</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- スライド5: 利益予算の根拠 -->
+        <div class="slide" id="slide-5">
+            <h2>利益予算の根拠</h2>
+            
+            <div class="highlight">
+                <p><strong>BANの成長戦略の方向性として、無理した多店舗展開ではなく強い店舗の集合体として成長していく方針です。全ての計画はこの土台の上に成り立ちます。</strong></p>
+            </div>
+            
+            <div class="strategy-box">
+                <h3>強い店舗の定義</h3>
+                <ul>
+                    <li>顧客満足度を高いレベルで維持</li>
+                    <li>従業員が一般的な給与の<strong>1.5倍</strong>獲得</li>
+                    <li>店舗利益は通常の<strong>3倍</strong></li>
+                </ul>
+            </div>
+            
+            <div class="strategy-box">
+                <h3>利益算出の考え方</h3>
+                <ul>
+                    <li>首都圏の坪売上平均: <strong>218,000円</strong></li>
+                    <li>賃料坪単価想定: <strong>25,000円</strong></li>
+                    <li>既存店5店舗の坪数・家賃を考慮</li>
+                    <li>平均坪売上からの利益の<strong>3倍</strong>を目標設定</li>
+                    <li>必要売上高を季節指数を加味して試算</li>
+                </ul>
+            </div>
+            
+            <div class="key-metric">合計利益目標: 1億300万円</div>
+        </div>
+
+        <!-- スライド6: 現状の課題と負のスパイラル -->
+        <div class="slide" id="slide-6">
+            <h2>現状の課題と負のスパイラルからの転換</h2>
+            
+            <div style="text-align:center; margin: 15px 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" style="max-width: 100%; height: auto;">
+                  <!-- 背景 -->
+                  <rect width="800" height="500" fill="white" />
+                  
+                  <!-- スパイラル図の背景円 -->
+                  <circle cx="400" cy="250" r="180" fill="#ffeeee" />
+                  
+                  <!-- スパイラルの矢印 - 簡潔で美しいカーブ -->
+                  <path d="M400,100 C520,100 550,170 550,250 C550,330 520,400 400,400 C280,400 250,330 250,250 C250,170 280,140 320,140" 
+                        stroke="#e74c3c" stroke-width="5" fill="none" stroke-linecap="round" />
+                  
+                  <!-- 矢印の先端 -->
+                  <polygon points="310,130 330,145 335,125" fill="#e74c3c" />
+                  
+                  <!-- 各ステージのテキストボックス -->  
+                  <!-- 1. 評価の不透明さ (起点・上) -->
+                  <rect x="320" y="70" width="160" height="60" rx="10" ry="10" fill="#e74c3c" />
+                  <text x="400" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">評価の不透明さ</text>
+                  <text x="400" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">適正評価の欠如</text>
+                  
+                  <!-- 2. モチベーション低下 (右) -->
+                  <rect x="530" y="220" width="160" height="60" rx="10" ry="10" fill="#e74c3c" />
+                  <text x="610" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">モチベーション低下</text>
+                  <text x="610" y="270" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">やる気の喪失</text>
+                  
+                  <!-- 3. サービス品質低下 (下) -->
+                  <rect x="320" y="370" width="160" height="60" rx="10" ry="10" fill="#e74c3c" />
+                  <text x="400" y="400" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">サービス品質低下</text>
+                  <text x="400" y="420" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">顧客満足度の低下</text>
+                  
+                  <!-- 4. 顧客離れ・売上減少 (左) -->
+                  <rect x="110" y="220" width="160" height="60" rx="10" ry="10" fill="#e74c3c" />
+                  <text x="190" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">顧客離れ・売上減少</text>
+                  <text x="190" y="270" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">業績悪化</text>
+                  
+                  <!-- 「結果として」のラベル - 位置調整（サービス品質ボックスと重ならないよう左上に移動） -->
+                  <text x="200" y="440" font-family="Arial, sans-serif" font-size="14" font-style="italic" fill="#5d3e9e">結果として</text>
+                  
+                  <!-- スパイラルの結果 -->
+                  <rect x="250" y="450" width="300" height="40" rx="20" ry="20" fill="#5d3e9e" />
+                  <text x="400" y="475" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">優秀な人材不足と競争社会の欠如</text>
+                  
+                  <!-- 結果を示す矢印 -->
+                  <path d="M400,430 L400,450" stroke="#5d3e9e" stroke-width="3" stroke-dasharray="5,3" />
+                  <polygon points="400,450 395,440 405,440" fill="#5d3e9e" />
+                </svg>
+            </div>
+            
+            <div class="highlight">
+                <p><strong>評価の不透明さを起点とした負のスパイラルが連鎖し、優秀な人材不足と競争社会の欠如を招いています</strong></p>
+                <p>生き残りのためには、このスパイラルを断ち切る抜本的な改革が急務です</p>
+            </div>
+        </div>
+
+        <!-- ナビゲーション -->
+        <div class="navigation">
+            <button id="prev-button" class="nav-button" disabled>前へ</button>
+            <div class="slide-indicator"><span id="current-slide">1</span> / <span id="total-slides">6</span></div>
+            <button id="next-button" class="nav-button">次へ</button>
+        </div>
+        
+        <div class="slide-dots">
+            <span class="dot active" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+            <span class="dot" data-slide="5"></span>
+            <span class="dot" data-slide="6"></span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            let currentSlide = 1;
+            
+            const prevButton = document.getElementById('prev-button');
+            const nextButton = document.getElementById('next-button');
+            const currentSlideElement = document.getElementById('current-slide');
+            const totalSlidesElement = document.getElementById('total-slides');
+            const dots = document.querySelectorAll('.dot');
+            
+            // 初期設定
+            totalSlidesElement.textContent = totalSlides;
+            updateNavigation();
+            
+            // 前へボタンのイベントリスナー
+            prevButton.addEventListener('click', function() {
+                if (currentSlide > 1) {
+                    showSlide(currentSlide - 1);
+                }
+            });
+            
+            // 次へボタンのイベントリスナー
+            nextButton.addEventListener('click', function() {
+                if (currentSlide < totalSlides) {
+                    showSlide(currentSlide + 1);
+                }
+            });
+            
+            // ドットによるナビゲーション
+            dots.forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const slideIndex = parseInt(this.getAttribute('data-slide'));
+                    showSlide(slideIndex);
+                });
+            });
+            
+            // 指定されたスライドを表示
+            function showSlide(slideIndex) {
+                // 現在のスライドを非表示
+                document.getElementById(`slide-${currentSlide}`).classList.remove('active');
+                
+                // 新しいスライドを表示
+                document.getElementById(`slide-${slideIndex}`).classList.add('active');
+                
+                // 現在のスライド番号を更新
+                currentSlide = slideIndex;
+                currentSlideElement.textContent = currentSlide;
+                
+                // ナビゲーションの状態を更新
+                updateNavigation();
+            }
+            
+            // ナビゲーションボタンとドットの状態を更新
+            function updateNavigation() {
+                // 前へボタンの状態
+                prevButton.disabled = currentSlide === 1;
+                
+                // 次へボタンの状態
+                nextButton.disabled = currentSlide === totalSlides;
+                
+                // ドットの状態
+                dots.forEach((dot, index) => {
+                    if (index + 1 === currentSlide) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // キーボードナビゲーション
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft' && currentSlide > 1) {
+                    showSlide(currentSlide - 1);
+                } else if (e.key === 'ArrowRight' && currentSlide < totalSlides) {
+                    showSlide(currentSlide + 1);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
